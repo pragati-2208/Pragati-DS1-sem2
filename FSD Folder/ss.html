@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Pattern</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Number Pattern Generator</h2>
+
+    <input type="number" id="num" placeholder="Enter value of n">
+    <button onclick="generatePattern()">Generate</button>
+
+    <div id="output"></div>
+
+    <script>
+        function generatePattern() {
+            let n = document.getElementById("num").value;
+            let result = "";
+
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= i; j++) {
+                    result += j + " ";
+                }
+                result += "\n";
+            }
+
+            document.getElementById("output").innerText = result;
+        }
+    </script>
+
+</body>
+</html>
